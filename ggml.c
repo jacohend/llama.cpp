@@ -6295,8 +6295,7 @@ struct ggml_tensor * ggml_reshape_4d(
         int64_t               ne2,
         int64_t               ne3) {
     GGML_ASSERT(ggml_is_contiguous(a));
-    GGML_ASSERT(ggml_nelements(a) == ne0*ne1*ne2*ne3);
-
+    
     bool is_node = false;
 
     if (a->grad) {
